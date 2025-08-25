@@ -1,0 +1,61 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-08-25 16:48:39.100120",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "date",
+  "unit",
+  "on",
+  "off",
+  "total_hrs"
+ ],
+ "fields": [
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date"
+  },
+  {
+   "fieldname": "unit",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "UNIT"
+  },
+  {
+   "fieldname": "on",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "ON"
+  },
+  {
+   "fieldname": "off",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "OFF"
+  },
+  {
+   "fieldname": "total_hrs",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "TOTAL HRS"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-08-25 16:59:44.953110",
+ "modified_by": "Administrator",
+ "module": "Custom Manufacturing",
+ "name": "Machine Usage",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
