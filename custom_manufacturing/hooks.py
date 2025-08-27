@@ -139,7 +139,11 @@ app_license = "mit"
 
 doc_events = {
 	"Stock Entry": {
-		"on_submit": "custom_manufacturing.custom_manufacturing.api.stock_entry.on_submit"
+		"on_submit": "custom_manufacturing.custom_manufacturing.api.stock_entry.on_submit",
+        "before_save":[ "custom_manufacturing.custom_manufacturing.api.stock_entry.sync_tinting_to_filling",
+                      #  "custom_manufacturing.custom_manufacturing.api.stock_entry.validate_filling_vs_tinting"
+                      ]
+
 	}
 }
 

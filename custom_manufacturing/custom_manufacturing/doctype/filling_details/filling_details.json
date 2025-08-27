@@ -6,20 +6,17 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "size",
+  "bulk_item",
+  "filled_item",
+  "item_name",
+  "pack_size",
   "filled",
   "required",
-  "balance"
+  "balance",
+  "total_qty",
+  "target_warehouse"
  ],
  "fields": [
-  {
-   "fieldname": "size",
-   "fieldtype": "Select",
-   "in_list_view": 1,
-   "label": "Size",
-   "link_filters": "[[\"Item Attribute\",\"attribute_name\",\"like\",\"%size%\"]]",
-   "options": "20LTRS\n10LTRS\n4LTR\n1LTR"
-  },
   {
    "fieldname": "required",
    "fieldtype": "Int",
@@ -37,12 +34,52 @@
    "fieldtype": "Int",
    "in_list_view": 1,
    "label": "Balance"
+  },
+  {
+   "fetch_from": "filled_item.item_name",
+   "fieldname": "item_name",
+   "fieldtype": "Read Only",
+   "in_list_view": 1,
+   "label": "Item Name"
+  },
+  {
+   "fieldname": "filled_item",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Filled Item",
+   "options": "Item"
+  },
+  {
+   "fieldname": "bulk_item",
+   "fieldtype": "Link",
+   "label": "Bulk Item",
+   "options": "Item",
+   "reqd": 1
+  },
+  {
+   "fieldname": "pack_size",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Size",
+   "link_filters": "[[\"Item Attribute\",\"attribute_name\",\"like\",\"%size%\"]]",
+   "options": "20LTRS\n10LTRS\n4LTR\n1LTR"
+  },
+  {
+   "fieldname": "total_qty",
+   "fieldtype": "Float",
+   "label": "Total Qty"
+  },
+  {
+   "fieldname": "target_warehouse",
+   "fieldtype": "Link",
+   "label": "Target Warehouse",
+   "options": "Warehouse"
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2025-08-25 16:07:22.098182",
+ "modified": "2025-08-27 16:01:51.293064",
  "modified_by": "Administrator",
  "module": "Custom Manufacturing",
  "name": "Filling Details",
